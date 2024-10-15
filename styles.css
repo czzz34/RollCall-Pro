@@ -3,6 +3,7 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 20px;
+    line-height: 1.6; /* Improved readability with line-height */
 }
 
 .container {
@@ -10,29 +11,67 @@ body {
     margin: 0 auto;
     background: #fff;
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Increased border radius for a softer look */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Deeper shadow for depth */
+    transition: transform 0.3s; /* Smooth scale transition on hover */
+}
+
+.container:hover {
+    transform: scale(1.02); /* Slightly scale up on hover for effect */
 }
 
 h1, h2 {
     color: #333;
+    text-align: center; /* Centered headings for a balanced look */
+}
+
+h1 {
+    font-size: 2.5em; /* Increased font size for main heading */
+}
+
+h2 {
+    font-size: 1.8em; /* Increased font size for subheadings */
+    margin-top: 20px; /* Added margin for spacing */
 }
 
 ul {
     list-style-type: disc;
     margin-left: 20px;
+    padding-left: 0; /* Reset padding to align with list items */
 }
 
 .download-button {
     display: inline-block;
     background-color: #28a745;
     color: white;
-    padding: 10px 15px;
+    padding: 12px 18px; /* Slightly increased padding for better touch target */
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s; /* Transition for background color and transform */
+    font-weight: bold; /* Bold text for emphasis */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
 }
 
 .download-button:hover {
     background-color: #218838;
+    transform: translateY(-2px); /* Raise button slightly on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+
+    h1 {
+        font-size: 2em; /* Smaller font size for headings */
+    }
+
+    h2 {
+        font-size: 1.5em; /* Smaller font size for subheadings */
+    }
+
+    .download-button {
+        padding: 10px 15px; /* Adjust padding for smaller screens */
+    }
 }
